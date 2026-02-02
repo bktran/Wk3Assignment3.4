@@ -15,26 +15,25 @@ namespace Wk3Assignment3._4
 
     enum IceLevel
     {
-        NoIce,
-        RegularIce,
-        LessIce,
-        MoreIce,
+        None,
+        Regular,
+        Less,
+        More,
     }
 
     enum SugarLevel
     {
-        NoSugar,
-        RegularSugar,
-        HalfSugar,
-        ExtraSugar,
+        None,
+        Regular,
+        Half,
+        Extra,
     }
     internal abstract class Beverage
     {
-        public bool Cold { get; set; } = true;
         protected static double BasePrice = 3.00;
-        protected BeverageSize Size { get; set; }
-        protected IceLevel IceOption { get; set; }
-        protected SugarLevel SugarLevel { get; set; }
-
+        public BeverageSize Size { get; set; } = BeverageSize.Small;
+        public IceLevel IceLevel { get; set; } = IceLevel.Regular;
+        public SugarLevel SugarLevel { get; set; } = SugarLevel.Regular;
+        
     }
 }

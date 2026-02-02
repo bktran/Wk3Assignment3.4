@@ -8,17 +8,21 @@ namespace Wk3Assignment3._4
 {
     internal class Coffee : Beverage
     {
-        private double UpCharge = 2.00;
-        public double Cost { get; set; }
         public string Name { get; set; }
-
-        public Coffee(string name)
+        public double Cost 
         {
-            Name = name;
-            Cost = Beverage.BasePrice+ UpCharge;
-            BeverageSize Size = BeverageSize.Small;
-            IceLevel Ice = IceLevel.RegularIce;
-            SugarLevel Sugar = SugarLevel.RegularSugar;
+            get
+            {
+                if (Size == BeverageSize.Medium)
+                {
+                    return BasePrice + 2; 
+                }
+                else if(Size == BeverageSize.Large) 
+                {
+                    return BasePrice + 2.5;      
+                }
+                    return BasePrice;
+            }
         }
     }
 }

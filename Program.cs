@@ -11,8 +11,9 @@ namespace Wk3Assignment3._4
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Data.CoffeeList.Add(new Coffee("Daily Special"));
-            Data.CoffeeList.Add(new Coffee("Afternoon Special",BeverageSize.Medium ));
+            Data.CoffeeList.Add(new Coffee() {Name = "Morning Special",Size = BeverageSize.Large });
+            Data.CoffeeList.Add(new Coffee() {Name = "Afternoon Special", IceLevel = IceLevel.More, Size = BeverageSize.Medium });
+            Data.CoffeeList.Add(new Coffee() {Name = "Evening Special", SugarLevel = SugarLevel.None });
 
             Application.Run(new Form1());
         }
